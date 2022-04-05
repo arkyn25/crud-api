@@ -38,10 +38,12 @@ const token = async ({ authorization }) => {
   if (!authorization) {
     throw err('missing auth token');
   }
+
   const payload = jwt.verify(authorization, secret);
   if (!payload) {
     throw err('jwt malformed');
   }
+
   const { password, ...checkUser } = await userModel.getUserByEmail(payload.email);
   if (!checkUser) {
     throw err('Invalid entries. Try again.');
