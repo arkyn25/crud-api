@@ -27,8 +27,8 @@ const login = async ({ email, password }) => {
   }
 };
 
-const recipe = async ({ name, ingredients, preparation }) => {
-  if (!name || !ingredients || !preparation) {
+const product = async ({ name, quantity }) => {
+  if (!name || !quantity) {
     throw err('Invalid entries. Try again.');
   }
 };
@@ -49,15 +49,15 @@ const token = async ({ authorization }) => {
   return checkUser;
 };
 
-const recipeId = async (id) => {
-  if (!ObjectId.isValid(id)) throw err('recipe not found');
+const productId = async (id) => {
+  if (!ObjectId.isValid(id)) throw err('product not found');
 };
 
 module.exports = {
   user,
   userExists,
   login,
-  recipe,
+  product,
   token,
-  recipeId,
+  productId,
 };
