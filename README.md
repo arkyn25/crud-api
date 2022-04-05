@@ -5,7 +5,7 @@
 
 ------------
 
-Um crud (create, reade, update, delete) de cadastro de produtos 'name' 'quantity' com login autenticado.
+Um crud (create, read, update, delete) de cadastro de produtos 'name' 'quantity' com login autenticado.
 
 ------------
 
